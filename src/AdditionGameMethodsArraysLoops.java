@@ -13,11 +13,11 @@ public class AdditionGameMethodsArraysLoops {
 		int score = 0;
 		
 		// create for loop for running rounds
-		int numberOfRounds = 4;
+		int numberOfRounds = 3;
 		for(int roundNumber = 1; 
 		roundNumber <= numberOfRounds;  
 		roundNumber = roundNumber + 1){
-			System.out.println("Round " + roundNumber);
+			System.out.println("Begin Round " + roundNumber);
 			boolean isAnswerCorrect = getAndCheckStudentAnswer(hardness);
 			if(isAnswerCorrect){
 				System.out.print("Your score was " + score + " and is now ");
@@ -44,20 +44,20 @@ public class AdditionGameMethodsArraysLoops {
 	}
 	
 	public static boolean getAndCheckStudentAnswer(int hardness) {
-		int[] array;
-		array = new int[2];
-		array[0] = (int)(Math.random()*hardness);
-		array[1] = (int)(Math.random()*hardness);
-		System.out.println("Add " + array[0] + " + " + array[1]);
+		int[] numbers;
+		numbers = new int[2];
+		numbers[0] = (int)(Math.random()*hardness);
+		numbers[1] = (int)(Math.random()*hardness);
+		System.out.println("Add " + numbers[0] + " + " + numbers[1]);
 		System.out.println("Please enter integars only.");
 	
 		Scanner get = new Scanner(System.in);
 		int studentAnswer = get.nextInt();
-		if(studentAnswer == (array[0] + array[1])){
+		if(studentAnswer == (numbers[0] + numbers[1])){
 			System.out.println("Good work! Your answer was correct.");
 			return true;
 		}else{
-			System.out.println("Nice try. The correct answer was " + (array[0] + array[1]));
+			System.out.println("Nice try. The correct answer was " + (numbers[0] + numbers[1]));
 			return false;
 		}
 	}

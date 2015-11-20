@@ -170,11 +170,11 @@ public class AdditionGameMethodsArraysLoops {
 		int score = 0;
 		
 		// create for loop for running rounds
-		int numberOfRounds = 4;
+		int numberOfRounds = 3;
 		for(int roundNumber = 1; 
 		roundNumber <= numberOfRounds;  
 		roundNumber = roundNumber + 1){
-			System.out.println("Round " + roundNumber);
+			System.out.println("Begin Round " + roundNumber);
 			boolean isAnswerCorrect = getAndCheckStudentAnswer(hardness);
 			if(isAnswerCorrect){
 				System.out.print("Your score was " + score + " and is now ");
@@ -201,20 +201,20 @@ public class AdditionGameMethodsArraysLoops {
 	}
 	
 	public static boolean getAndCheckStudentAnswer(int hardness) {
-		int[] array;
-		array = new int[2];
-		array[0] = (int)(Math.random()*hardness);
-		array[1] = (int)(Math.random()*hardness);
-		System.out.println("Add " + array[0] + " + " + array[1]);
+		int[] numbers;
+		numbers = new int[2];
+		numbers[0] = (int)(Math.random()*hardness);
+		numbers[1] = (int)(Math.random()*hardness);
+		System.out.println("Add " + numbers[0] + " + " + numbers[1]);
 		System.out.println("Please enter integars only.");
 	
 		Scanner get = new Scanner(System.in);
 		int studentAnswer = get.nextInt();
-		if(studentAnswer == (array[0] + array[1])){
+		if(studentAnswer == (numbers[0] + numbers[1])){
 			System.out.println("Good work! Your answer was correct.");
 			return true;
 		}else{
-			System.out.println("Nice try. The correct answer was " + (array[0] + array[1]));
+			System.out.println("Nice try. The correct answer was " + (numbers[0] + numbers[1]));
 			return false;
 		}
 	}
@@ -222,35 +222,28 @@ public class AdditionGameMethodsArraysLoops {
 ```
 ## Console
 ```java
-Round 1
-Add 0 + 0
+Begin Round 1
+Add 0 + 3
 Please enter integars only.
-0
+3
 Good work! Your answer was correct.
 Your score was 0 and is now 5.
 Your hardness was 5 and is now 10.
-Round 2
-Add 9 + 6
+Begin Round 2
+Add 5 + 7
 Please enter integars only.
-15
+12
 Good work! Your answer was correct.
 Your score was 5 and is now 15.
 Your hardness was 10 and is now 20.
-Round 3
-Add 17 + 7
+Begin Round 3
+Add 14 + 12
 Please enter integars only.
-24
+26
 Good work! Your answer was correct.
 Your score was 15 and is now 35.
-Your hardness was 20 and is now 40.
-Round 4
-Add 5 + 23
-Please enter integars only.
-28
-Good work! Your answer was correct.
-Your score was 35 and is now 75.
 The game is complete.
-Your final score was 75
+Your final score was 35
 ```
 
 ## Summary
