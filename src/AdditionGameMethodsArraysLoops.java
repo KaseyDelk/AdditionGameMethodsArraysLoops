@@ -44,8 +44,7 @@ public class AdditionGameMethodsArraysLoops {
 	}
 	
 	public static boolean getAndCheckStudentAnswer(int hardness) {
-		int[] numbers;
-		numbers = new int[2];
+		int[] numbers = new int[2];
 		numbers[0] = (int)(Math.random()*hardness);
 		numbers[1] = (int)(Math.random()*hardness);
 		System.out.println("Add " + numbers[0] + " + " + numbers[1]);
